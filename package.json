@@ -1,0 +1,36 @@
+{
+  "name": "@ravisoni/amps-stats-block",
+  "version": "1.0.0",
+  "description": "AMP statistics block for Gutenberg",
+  "author": "Ravi Soni",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ravisoni6262/amp-stats-block/issues"
+  },
+  "homepage": "https://github.com/ravisoni6262/amp-stats-block#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravisoni6262/amp-stats-block.git"
+  },
+  "scripts": {
+    "postinstall": "composer install",
+    "dev": "wp-scripts start",
+    "build": "wp-scripts build",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:js": "eslint js/src",
+    "lint:php": "composer lint",
+    "test": "npm-run-all --parallel test:*",
+    "test:php": "composer test",
+    "test:php:no-coverage": "composer test -- --no-coverage",
+    "coverage": "npm-run-all --parallel coverage:*",
+    "coverage:php": "composer coverage"
+  },
+  "devDependencies": {
+    "@wordpress/block-editor": "2.2.0",
+    "@wordpress/eslint-plugin": "^2.4.0",
+    "@wordpress/scripts": "^3.4.0",
+    "eslint": "^6.2.2",
+    "npm-run-all": "4.1.5"
+  },
+  "dependencies": {}
+}

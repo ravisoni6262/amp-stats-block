@@ -1,0 +1,8 @@
+/vendor/
+/node_modules/
+/.vagrant/
+/phpcs.xml
+/phpunit.xml
+/console.log
+/.phpunit.result.cache
+/js/dist

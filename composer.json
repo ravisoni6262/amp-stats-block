@@ -1,0 +1,45 @@
+{
+  "name": "ravisoni/amp-stats-block",
+  "description": "AMP statistics block for Gutenberg",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "composer/installers": "^1.7"
+  },
+  "require-dev": {
+    "10up/wp_mock": "^0.4.2",
+    "mockery/mockery": "^1.2",
+    "php-coveralls/php-coveralls": "^2.1",
+    "phpunit/phpunit": "^8.3",
+    "wp-coding-standards/wpcs": "^2.1",
+    "wpsh/local": "^0.2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "AMPS\\BlockExtend\\": "php/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AMPS\\BlockExtendTest\\": "tests/php/"
+    }
+  },
+  "scripts": {
+    "lint": [
+      "@composer validate --strict",
+      "phpcs ."
+    ],
+    "test": [
+      "phpunit"
+    ],
+    "coverage": [
+      "php-coveralls --verbose"
+    ],
+    "build": [
+      "composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
