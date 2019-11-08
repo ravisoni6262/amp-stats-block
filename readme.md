@@ -33,14 +33,15 @@ This Wordpress plugin adds a block to the Wordpress' Gutenberg editor to display
 
 	Go to the container named 'wordress:latest':
 
-	  docker exec -it {container_id} /bin/bash
+	   docker exec -it {container_id} /bin/bash
 	
 	Open wp-config.php (you may need to install `nano` or any other editor of your choice) and place this line of code:
 
-	  `define('FS_METHOD','direct');`
+	   `define('FS_METHOD','direct');`
 
 	The FTP popup will disappear. If you face a permission issue, change the owner-group of the `wp-content` directory to `www-data`:
-	  chown www-data:www-data -R .
+	
+	   chown www-data:www-data -R .
 
 ### Scripts
 
